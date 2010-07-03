@@ -12,7 +12,16 @@
 
     $.fn.depechemode = function(options){
 	$(this).ready(function(event){
-
+	    // Allow selecting with mouse hover
+	    $('tr.listing').hover(
+		function (){
+		    $(this).addClass('highlight');
+		},
+		function (){
+		    $(this).removeClass('highlight');
+		}
+	    );
+	    
 	    // Allow selecting through keyboard
 	    $(this).keydown(function(e) {
 
