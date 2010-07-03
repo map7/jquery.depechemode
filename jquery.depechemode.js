@@ -30,12 +30,12 @@
 		// Check if a number was entered between 0 and 9
 		if (key >= 0 && key <= 9){
 		    if (key === 0)
-			key = 10
+			no = 10
 		    else
 			no = key - 1;
 
 		    $('tr.listing').removeClass('highlight');
-		    $('tr.listing:eq('+no+')').addClass('highlight');
+		    $('tr.listing').eq(no).addClass('highlight');
 		}else{
 		    key = key.toLowerCase();
 		    
