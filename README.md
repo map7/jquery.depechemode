@@ -22,3 +22,16 @@ jquery.beeline
 
 #Use
 
+Add the following to your application.js
+  $(document).depechemode();
+
+Make sure the id is set on your show,edit,destroy links eg:
+  <td><%= link_to "Show", product, :class => 'ajax', :target => 'content', :id => 'show' %></td>
+
+Functions available
+shotcut key = id of link
+s = show
+e = edit
+d = destroy
+t = tag
+m = move

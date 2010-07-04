@@ -43,13 +43,19 @@
 		    if (select_keys.indexOf(key) >= 0){
 			switch (key){
 			case 's':
-			    $('.highlight').children('td').children('a:contains(Show)').click();
+			    $('.highlight').children('td').children('#show').click();
 			    break;
 			case 'e':
-			    $('.highlight').children('td').children('a:contains(Edit)').click();
+			    $('.highlight').children('td').children('#edit').click();
 			    break;
 			case 'd':
-			    $('.highlight').children('td').children('a:contains(Destroy)').click();
+			    $('.highlight').children('td').children('#destroy').click();
+			    break;
+			case 't':
+			    $('.highlight').children('td').children('#tag').click();
+			    break;
+			case 'm':
+			    $('.highlight').children('td').children('#move').click();
 			    break;
 			};
 		    };
