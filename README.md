@@ -4,11 +4,7 @@
 
 Allows a user to select items from a list with number keys on the keyboard 0 to 9, where 0 equals 10.
 
-Once the line is highlighted then you can hit the following keys to click the link:
-s = Show
-e = Edit
-d = Destroy
-t = Tag
+Once the line is highlighted then you can hit the shortcut key which will click the link.
 
 All these links must be ajax links so that the click function works.  You might want to use my jQuery.Beeline plugin.
 
@@ -30,8 +26,8 @@ Make sure the id is set on your show,edit,destroy links eg:
 
 Functions available
 shotcut key = id of link
-s = show
-e = edit
-d = destroy
-t = tag
-m = move
+  - s = show
+  - e = edit
+  - d = destroy
+  - t = tag
+  - m = move
