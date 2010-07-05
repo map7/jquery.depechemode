@@ -19,7 +19,7 @@
 		   118: "f7", 119: "f8", 120: "f9", 121: "f10", 122: "f11", 123: "f12", 
 		   144: "numlock", 145: "scroll", 191: "/", 224: "meta"};
 
-    var select_keys = ['s', 'e', 'd', 't'];
+    var select_keys = {s: "show", e: "edit", d: "destroy", t: "tag", m: "move"};
 
     $.fn.depechemode = function(options){
 	$(this).ready(function(event){
@@ -45,34 +45,12 @@
 		
 		// Check if a number was entered between 0 and 9
 		if (key >= 0 && key <= 9){
-		    if (key === 0)
-			no = 10
-		    else
-			no = key - 1;
-
+		    no = (key === 0) ? 10 : key - 1;
 		    $('tr.listing').removeClass('highlight');
 		    $('tr.listing').eq(no).addClass('highlight');
 		}else{
-		    // else initiate the show/edit/destroy/tag link for that selection
-		    if (select_keys.indexOf(key) >= 0){
-			switch (key){
-			case 's':
-			    $('.highlight').children('td').children('#show').click();
-			    break;
-			case 'e':
-			    $('.highlight').children('td').children('#edit').click();
-			    break;
-			case 'd':
-			    $('.highlight').children('td').children('#destroy').click();
-			    break;
-			case 't':
-			    $('.highlight').children('td').children('#tag').click();
-			    break;
-			case 'm':
-			    $('.highlight').children('td').children('#move').click();
-			    break;
-			};
-		    };
+		    if (select_keys[key])
+			$('.highlight').children('td').children('#'+select_keys[key]).click();
 		};
 	    });
 	});
