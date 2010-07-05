@@ -34,9 +34,9 @@
 		
 		// Check if a number was entered between 0 and 9
 		if (key >= 0 && key <= 9){
-		    no = (key === 0) ? 10 : key - 1;
-		    $('tr.listing').removeClass('highlight');
-		    $('tr.listing').eq(no).addClass('highlight');
+		    no = (key == 0) ? 10 : key;
+		    $('tr').removeClass('highlight');
+		    $('tr').eq(no).addClass('highlight');
 		}else{
 		    if (select_keys[key])
 			$('.highlight').children('td').children('#'+select_keys[key]).click();
