@@ -26,12 +26,8 @@
 	    // Allow selecting through keyboard
 	    $(this).keydown(function(e) {
 
-		if (special[e.which])
-		    key = 0;
-		else{
-		    key = String.fromCharCode(e.which);
-		    key = key.toLowerCase();
-		};
+		// Check if it's a special key or not.
+		key = (special[e.which]) ? 0 : String.fromCharCode(e.which).toLowerCase();
 		
 		// Check if a number was entered between 0 and 9
 		if (key >= 0 && key <= 9){
