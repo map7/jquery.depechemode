@@ -26,8 +26,11 @@
 	    // Allow selecting through keyboard
 	    $(this).keydown(function(e) {
 
+		// Check numlock keys
+		code = (e.which >= 96 && e.which <= 105) ? e.which - 48 : e.which
+
 		// Check if it's a special key or not.
-		key = (special[e.which]) ? 0 : String.fromCharCode(e.which).toLowerCase();
+		key = (special[code]) ? 0 : String.fromCharCode(code).toLowerCase();
 		
 		// Check if a number was entered between 0 and 9
 		if (key >= 0 && key <= 9){
