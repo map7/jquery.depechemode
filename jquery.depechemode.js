@@ -1,11 +1,5 @@
 /*
  * jQuery depechemode (Shortcut keys plugin)
- *
- * Based upon plugin
- * http://github.com/jeresig/jquery.hotkeys
- *
- * Special thanks to Andrew France.
- *
 */
 (function($){
     // Hold special keys
