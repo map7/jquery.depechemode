@@ -26,7 +26,8 @@
 	    $(this).keydown(function(e) {
 
 		key = String.fromCharCode(e.which);
-
+		key = key.toLowerCase();
+		
 		// Check if a number was entered between 0 and 9
 		if (key >= 0 && key <= 9){
 		    if (key === 0)
@@ -37,8 +38,6 @@
 		    $('tr.listing').removeClass('highlight');
 		    $('tr.listing').eq(no).addClass('highlight');
 		}else{
-		    key = key.toLowerCase();
-		    
 		    // else initiate the show/edit/destroy/tag link for that selection
 		    if (select_keys.indexOf(key) >= 0){
 			switch (key){
