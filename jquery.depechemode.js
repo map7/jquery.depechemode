@@ -25,12 +25,8 @@
 	$(this).ready(function(event){
 	    // Allow selecting with mouse hover
 	    $('tr.listing').hover(
-		function (){
-		    $(this).addClass('highlight');
-		},
-		function (){
-		    $(this).removeClass('highlight');
-		}
+		function (){ $(this).addClass('highlight'); },    // Hover over
+		function (){ $(this).removeClass('highlight'); }  // Leave hover
 	    );
 	    
 	    // Allow selecting through keyboard
