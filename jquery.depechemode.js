@@ -23,7 +23,7 @@
 		    // Check numlock keys (96 -> 105)
 		    code = (e.which >= 96 && e.which <= 105) ? e.which - 48 : e.which
 
-		    if (code >= 48 && code <= 57)
+		    if ((code >= 48 && code <= 57) || (code >= 97 && code <=122) || (code >= 65 && code <= 90))
 			key = String.fromCharCode(code).toLowerCase();
 		    else
 			key = -1;
