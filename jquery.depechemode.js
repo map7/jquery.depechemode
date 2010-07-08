@@ -7,6 +7,20 @@
     $.fn.depechemode = function(options){
 	$(this).ready(function(event){
 
+	    // Add shortcut keys to Next & Previous
+	    $(document).keydown(function(e){
+		key = String.fromCharCode(e.which).toLowerCase();
+
+		if (e.ctrlKey && e.keyCode == 39){
+			$('.next_page').click();
+			return false;
+		};
+		if (e.ctrlKey && e.keyCode == 37){
+			$('.prev_page').click();
+			return false;
+		};
+	    });
+
 	    // Allow selecting with mouse hover
 	    $('tr.listing').livequery(function(){
 		$(this).hover(function() {   // Hover bind

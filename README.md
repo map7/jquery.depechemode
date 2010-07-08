@@ -16,6 +16,7 @@ jquery.livequery-1.1.1 - http://github.com/brandonaaron/livequery.git
 #Recommend
 
 jquery.beeline
+will_paginate
 
 #Use
 
@@ -32,3 +33,7 @@ shotcut key = id of link
   - d = destroy
   - t = tag
   - m = move
+
+Next & Previous pagination through will_paginate
+Ctrl + <right arrow> = Next Page
+Ctrl + <left arrow>  = Prev Page
