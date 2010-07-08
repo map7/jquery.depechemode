@@ -11,6 +11,7 @@ All these links must be ajax links so that the click function works.  You might 
 #Requires
 
 jquery-1.4.2
+jquery.livequery-1.1.1 - http://github.com/brandonaaron/livequery.git
 
 #Recommend
 

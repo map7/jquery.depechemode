@@ -6,12 +6,16 @@
 
     $.fn.depechemode = function(options){
 	$(this).ready(function(event){
+
 	    // Allow selecting with mouse hover
-	    $('tr.listing').hover(
-		function (){ $('tr.listing').removeClass('highlight');
-			     $(this).addClass('highlight'); },    // Hover over
-		function (){ $(this).removeClass('highlight'); }  // Leave hover
-	    );
+	    $('tr.listing').livequery(function(){
+		$(this).hover(function() {   // Hover bind
+		    $('tr.listing').removeClass('highlight');
+		    $(this).addClass('highlight'); 
+		});
+	    },  
+	      function (){ $(this).removeClass('highlight'); }  // Hover unbind
+	     );
 	    
 	    // Allow selecting through keyboard
 	    $(this).keydown(function(e) {
