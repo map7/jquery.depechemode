@@ -43,3 +43,7 @@ shotcut key = id of link
 Next & Previous pagination through will_paginate
 Ctrl + <right arrow> = Next Page
 Ctrl + <left arrow>  = Prev Page
+
+#TODO
+
+Change over so we use accesskeys instead of id's for selecting show,edit,destroy,tag and move.
