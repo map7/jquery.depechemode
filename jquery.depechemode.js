@@ -6,7 +6,18 @@
 (function($){
     var select_keys = {s: "show", e: "edit", d: "destroy", t: "tag", m: "move"};
 
+    $.depechemode = {
+	defaults: {
+	    container: "content"
+	}
+    };
+    
     $.fn.depechemode = function(options){
+
+	options = $.extend($.depechemode.defaults, options);
+
+	container = options['container']
+
 	$(this).ready(function(event){
 
 	    // Add shortcut keys to Next & Previous
@@ -93,7 +104,7 @@
 		// All will_paginate entities in the DOM gets ajaxified with 
 		// livequery (http://ozmm.org/posts/ajax_will_paginate_jq_style.html)
 		$('div.pagination a').livequery('click', function() {
-		    $('#content').railsLoad(this.href);
+		    $('#' + container).railsLoad(this.href);
 		    return false;
 		});
 	    });
